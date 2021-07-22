@@ -11,7 +11,7 @@ MAT_SIZE_X = 100
 MAT_SIZE_Y = 100
 MAT_SIZE_Z = 100
 
-BLOCKSIZE = 8
+BLOCKSIZE = 4
 
 row2str = lambda row:''.join(['0' if c != 0 else '-' for c in row])
 
@@ -27,7 +27,7 @@ def print_world(stdscr, gen, world):
     height = min(height, scr_height)
     width = min(width, scr_width)
     for y in range(height):
-        row = world[2][y][:width]
+        row = world[1][y][:width]
         stdscr.addstr(y, 0, row2str(row))
     stdscr.refresh()
 
